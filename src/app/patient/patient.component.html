@@ -1,0 +1,32 @@
+<form [formGroup]="patientForm" (ngSubmit)="OnSubmit()" *ngIf="!msg">
+    <h3>Enter Patient Details</h3>
+    <div class ="mb-3">
+        <label  for="doctorName" class="form-label">Patient Name</label>
+        <input class="form-control" id="doctorName" placeholder="Enter patient name.." formControlName="patientName">
+    </div>
+    <br><br>
+    <div class="mb-3">
+        <label form="age" class="form-label">age      </label>
+        <input class="form-control" id="age"  placeholder="age.." formControlName="age"> 
+    </div>
+    <br><br>
+    <div class="mb-3">
+        <label form="phoneNo" class="form-label">phoneNo</label>
+        <input class="form-control" id="phoneNo" aria-describedby="phoneNo"  placeholder="PhoneNo" formControlName="phoneNo"> 
+    </div>
+    <br><br>
+
+<button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <form [formGroup]="assignDoctorForm" (ngSubmit)="OnDoctorSubmit()" *ngIf="msg">
+    <h3>Assign Doctor</h3>
+    <div class ="mb-3">
+        <label  for="doctorName" class="form-label">Doctor Name</label>
+        <input class="form-control" id="doctorName" placeholder="Enter doctor name.." formControlName="doctorName">
+    </div>
+    <br><br>
+
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+ 

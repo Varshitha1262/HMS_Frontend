@@ -1,0 +1,30 @@
+<div class="container" style="text-align: center;">
+    <button type="button" (click)="getDoctorDetails()"> get doctor details</button>
+   
+
+<table border ="1" style="margin-left: auto;margin-right: auto;" >
+    <thead>
+        <tr>
+            <!-- <th>Doctor Id</th> -->
+            <th>Doctor Name</th>
+            <th>Gender</th>
+            <th>Phone No</th>
+            <th>Assigned Patients</th>
+            
+        
+        </tr>
+    
+        <tr *ngFor="let d of doctor">
+            <!-- <td>{{d.doctorId}}</td> -->
+            <td>{{d.doctorName}}</td>
+            <td>{{d.gender}}</td>
+            <td>{{d.phoneNo}}</td>
+            <p *ngFor="let p of d.patient">
+                <td>{{p.patientName}}</td>
+            </p>
+            
+        </tr>
+    </thead>
+</table>
+
+</div>

@@ -1,0 +1,22 @@
+<form [formGroup]="doctorForm" (ngSubmit)="OnSubmit()">
+    <h3>Enter Doctor Details</h3>
+    <div class ="mb-3">
+        <label  for="doctorName" class="form-label">Doctor Name</label>
+        <input class="form-control" id="doctorName" placeholder="Enter doctor name.." formControlName="doctorName">
+    </div>
+    <br><br>
+    <div class="mb-3">
+        <label form="gender" class="form-label">Gender      </label>
+        <input class="form-control" id="gender"  placeholder="gender.." formControlName="gender"> 
+    </div>
+    <br><br>
+    <div class="mb-3">
+        <label form="phoneNo" class="form-label">phoneNo</label>
+        <input class="form-control" id="phoneNo" aria-describedby="phoneNo"  placeholder="PhoneNo" formControlName="phoneNo"> 
+    </div>
+    <br><br>
+
+    
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
